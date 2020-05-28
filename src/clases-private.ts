@@ -1,7 +1,5 @@
 export {};
 
-// TypeScript 3.8
-
 enum PhotoOrientation {
   Landscape,
   Portrait,
@@ -11,9 +9,9 @@ enum PhotoOrientation {
 
 class Picture {
   // Propiedades
-  public id: number;
-  public title: string;
-  public orientation: PhotoOrientation;
+  private id: number;
+  private title: string;
+  private orientation: PhotoOrientation;
 
   public constructor(id: number, title: string, orientation: PhotoOrientation) {
     this.id = id;
@@ -27,9 +25,9 @@ class Picture {
 }
 
 class Album {
-  public id: number;
-  public title: string;
-  public pictures: Picture[];
+  private id: number;
+  private title: string;
+  private pictures: Picture[];
 
   public constructor(id: number, title: string) {
     this.id = id;
@@ -48,10 +46,10 @@ album.addPicture(picture);
 
 console.log('album', album);
 
-// Accediento a los miembros publicos
+// Accediento a los miembros privateos
 
-picture.id = 100;
-picture.title = 'Another title';
-album.title = 'Family on vacations';
+// picture.id = 100; // private
+// picture.title = 'Another title'; // private
+// album.title = 'Family on vacations'; // private
 
 console.log('album', album);

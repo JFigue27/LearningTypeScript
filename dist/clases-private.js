@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// TypeScript 3.8
 var PhotoOrientation;
 (function (PhotoOrientation) {
     PhotoOrientation[PhotoOrientation["Landscape"] = 0] = "Landscape";
@@ -35,8 +34,8 @@ var album = new Album(1, 'Personal Picture');
 var picture = new Picture(1, 'Family Picture', PhotoOrientation.square);
 album.addPicture(picture);
 console.log('album', album);
-// Accediento a los miembros publicos
-picture.id = 100;
-picture.title = 'Another title';
-album.title = 'Family on vacations';
+// Accediento a los miembros privateos
+// picture.id = 100; // private
+// picture.title = 'Another title'; // private
+// album.title = 'Family on vacations'; // private
 console.log('album', album);
